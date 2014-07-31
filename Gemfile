@@ -45,3 +45,6 @@ gem 'spring',        group: :development
 #for login
 gem 'devise'
 
+#solving logout problem on heroku
+gem 'rails_12factor', group: :production
+
