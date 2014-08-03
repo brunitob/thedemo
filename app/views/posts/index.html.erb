@@ -1,0 +1,11 @@
+	<ul>
+        <% @posts.each do |p| %>
+            <li>
+                <h3><%= link_to p.title, post_path(p.id) %></h3>
+                <p><small><strong>By: </strong><%= p.user.email  if p.user %></small></p>
+                <p><%= p.body %></p>
+            </li>
+        <% end %>
+    </ul>
+
+
