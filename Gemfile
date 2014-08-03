@@ -54,3 +54,7 @@ gem 'paperclip', '~> 4.1'
 
 gem 'bootstrap-sass', '~> 3.1.1'
 
+#active admin
+
+gem 'activeadmin', github: 'gregbell/active_admin'
+
