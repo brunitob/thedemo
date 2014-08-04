@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :companies
   devise_for :users
 
-  resources :users, only: [:index, :show]
+  resources :users, only: [:index, :show, :profile, :perfil]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
 
   resources :posts
+
+  get 'profile', to: 'users#profile'
 
 
   # Example of regular route:
