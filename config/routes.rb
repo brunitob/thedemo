@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :posts
 
   get 'profile', to: 'users#profile'
+   get 'follow/:id', to: 'users#follow', as: :follow
 
 
   # Example of regular route:
