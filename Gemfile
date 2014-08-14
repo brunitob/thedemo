@@ -62,3 +62,7 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 
 gem "acts_as_follower"
 
+#for friendly ids
+
+gem 'friendly_id', '~> 5.0.0'
+

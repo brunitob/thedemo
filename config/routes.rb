@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   resources :posts
 
-  get 'profile', to: 'users#profile'
+  get 'profile', to: 'users#profile', as: :profile
    get 'follow/:id', to: 'users#follow', as: :follow
 
 

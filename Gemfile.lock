@@ -76,6 +76,8 @@ GEM
     execjs (2.2.1)
     formtastic (2.3.0.rc3)
       actionpack (>= 3.0)
+    friendly_id (5.0.4)
+      activerecord (>= 4.0.0)
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
@@ -191,6 +193,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.1.1)
   coffee-rails (~> 4.0.0)
   devise
+  friendly_id (~> 5.0.0)
   jbuilder (~> 2.0)
   jquery-rails
   paperclip (~> 4.1)
