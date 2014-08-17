@@ -28,6 +28,10 @@
     <div class="feed">
         <div>
             <h3>Get more endorsers!</h3>
+                <div class="input-group">
+                <span class="input-group-addon">Link to share</span>
+                <input type="text" class="form-control" <%= 'value='+request.original_url+ follow_path(@user.id)+'' %>>
+</div>
         </div>
         <table class="table table-striped">
             <% @user.followers.each do |f| %>
