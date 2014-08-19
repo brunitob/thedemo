@@ -58,3 +58,11 @@ gem 'bootstrap-sass', '~> 3.1.1'
 
 gem 'activeadmin', github: 'gregbell/active_admin'
 
+#acts as followers, for endorsements
+
+gem "acts_as_follower"
+
+#for friendly ids
+
+gem 'friendly_id', '~> 5.0.0'
+

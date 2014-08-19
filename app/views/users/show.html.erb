@@ -5,10 +5,19 @@
         <ul>
             <%= content_tag(:li, ("Name: " + @user.name)) unless @user.name.blank? %>
             <%= content_tag(:li, ("Age: " + distance_of_time_in_words(Time.now, @user.date_of_birth) + " old")) unless @user.date_of_birth.blank? %>
+            <%= content_tag(:li, ("Email: " + @user.email)) unless @user.email.blank? %>
         </ul>
+        <%= link_to "Endorse!", follow_path(@user.id) %>
     </div>
     <div class="feed">
-        <h3>Social Feed Coming</h3>
-        <p>Put a couple of lines of text here and see how it scrolls</p>
+        <h3>Endorsers: <%= @user.followers_count %></h3>
+        <table class="table table-striped">
+            <% @user.followers.each do |f| %>
+                <tr>
+                  <td><%= f.id %></td>
+                  <td><%= f.email %></td>
+                </tr>  
+            <% end %>
+        </table>
     </div>
 </div>

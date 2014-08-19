@@ -1,0 +1,21 @@
+<h3><%= @user.email %> needs your help!</h3>
+<div class="row-fluid">
+  <div class="col-md-12 text-center">
+    <div class="thumbnail">
+      <%= image_tag(@user.avatar.url(:medium), class: 'avatar') %>
+      <div class="caption">
+        <h5>Do you want to endorse <span class="black-text"><%= @user.email %></span>???</h5>
+        <p>Your endorse will leverage the profile! With one click you can </p>
+        
+
+        <% if current_user %>
+	        <%= button_to "endorse", follow_path(@user.id), class: "btn-default", :method => :get unless @user.following?(User.find(current_user)) %>
+	    <% else %>
+	        <%= button_to "endorse", follow_path(@user.id), class: "btn-default", :method => :get %>
+	    <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>
+
