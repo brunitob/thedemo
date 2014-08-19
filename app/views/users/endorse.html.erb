@@ -1,17 +1,21 @@
-<div class="header">
-<h3>Do you want to endorse <span class="black-text"><%= @user.full_name %></span>???</h3>
+<h3><%= @user.email %> needs your help!</h3>
+<div class="row-fluid">
+  <div class="col-md-12 text-center">
+    <div class="thumbnail">
+      <%= image_tag(@user.avatar.url(:medium), class: 'avatar') %>
+      <div class="caption">
+        <h5>Do you want to endorse <span class="black-text"><%= @user.email %></span>???</h5>
+        <p>Your endorse will leverage the profile! With one click you can </p>
+        
 
-<div class="row">
-  <div class="col-md-6"><%= image_tag(@user.avatar.url(:medium), class: 'avatar') %></div>
-  <div class="col-md-6">
-  		<h2><%= @user.name %> needs your help!</h2><br>
-  		<br>
-  		<%= link_to "Endorse!", follow_path(@user.id) %>
+        <% if current_user %>
+	        <%= button_to "endorse", follow_path(@user.id), class: "btn-default", :method => :get unless @user.following?(User.find(current_user)) %>
+	    <% else %>
+	        <%= button_to "endorse", follow_path(@user.id), class: "btn-default", :method => :get %>
+	    <% end %>
 
+      </div>
+    </div>
   </div>
-</div>
-
-
-
 </div>
 

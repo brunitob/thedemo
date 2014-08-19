@@ -12,15 +12,15 @@ class UsersController < ApplicationController
     @user = User.find(current_user)
   end
   def follow
-  	@user_to_follow = User.find(params[:id])
-	@user = User.find(current_user)
+    @user_to_follow = User.find(params[:id])
+  	@user = User.find(current_user)
 	
 	 if @user.follow(@user_to_follow) # Creates a record for the user as the follower and the book as the followable
       flash[:success] = "NEW FOLLOW!"
-      redirect_to :controller => 'users', :action => 'endorse', :id => @user.id
+      redirect_to :controller => 'users', :action => 'profile'
     else
       flash[:alert] = "No follow"
-      #redirect_to :controller => 'users', :action => 'show', :id => @user.id
+      redirect_to :controller => 'users', :action => 'profile'
     end
   end
   def endorse
