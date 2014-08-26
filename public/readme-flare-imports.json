@@ -1,0 +1,6 @@
+[
+{"name":"flare.actor.Brad Pit","size":3938,"imports":["flare.actor.Roman"]},
+{"name":"flare.actor.Roman","size":3812,"imports":["flare.actor.Brad Pit","flare.actor.Abajo"]},
+{"name":"flare.actor.Nadie","size":6714,"imports":["flare.actor.Roman","flare.actor.Brad Pit"]},
+{"name":"flare.actor.Abajo","size":743,"imports":[]}
+]

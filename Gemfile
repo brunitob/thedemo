@@ -66,3 +66,9 @@ gem "acts_as_follower"
 
 gem 'friendly_id', '~> 5.0.0'
 
+gem 'aws-sdk', '~> 1.36.1'
+
+gem 'fog'
+
+gem "figaro"
+
