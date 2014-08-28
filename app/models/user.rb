@@ -23,6 +23,8 @@ has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x10
     },
     fog_directory: ENV["FOG_DIRECTORY"]
 
+    do_not_validate_attachment_file_type :avatar
+
   def full_name
     if self.name.blank?
       self.email
